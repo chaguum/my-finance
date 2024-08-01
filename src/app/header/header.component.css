@@ -1,0 +1,34 @@
+
+:host  ::ng-deep .p-menubar{
+  @apply bg-gray-900 text-white;
+  border: 1px black;
+  border-style: solid;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px 0px black;
+}
+
+::ng-deep .p-menuitem-icon,
+::ng-deep .p-menuitem-text
+{
+  @apply text-white;
+}
+
+::ng-deep .p-menuitem-content:not(.p-disabled):hover,
+::ng-deep .p-tieredmenu:focus{
+  @apply bg-transparent bg-slate-800 rounded-lg;
+}
+
+::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-text,
+::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-icon {
+  @apply text-blue-500;
+}
+
+::ng-deep .p-tieredmenu{
+  @apply bg-gray-900 text-white;
+}
+
+::ng-deep  .p-menuitem-content {
+  background-color: initial;
+}
+
+
