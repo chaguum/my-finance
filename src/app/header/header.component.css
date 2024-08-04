@@ -1,12 +1,12 @@
 
 :host  ::ng-deep .p-menubar{
-  @apply bg-gray-900 text-white;
-  border: 1px black;
+  @apply bg-gray-900 border-gray-900 text-white rounded-none	;
+  border-bottom: 1px grey;
   border-style: solid;
-  border-radius: 20px;
-  box-shadow: 0px 4px 6px 0px black;
+
 }
 
+::ng-deep .p-menuitem-link,
 ::ng-deep .p-menuitem-icon,
 ::ng-deep .p-menuitem-text
 {
@@ -15,11 +15,12 @@
 
 ::ng-deep .p-menuitem-content:not(.p-disabled):hover,
 ::ng-deep .p-tieredmenu:focus{
-  @apply bg-transparent bg-slate-800 rounded-lg;
+  @apply bg-transparent rounded-lg;
 }
 
 ::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-text,
-::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-icon {
+::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-icon,
+::ng-deep .p-menuitem-content:not(.p-disabled):hover .p-menuitem-link {
   @apply text-blue-500;
 }
 
@@ -31,4 +32,7 @@
   background-color: initial;
 }
 
+.fixed-navbar {
+  @apply fixed top-0 left-0 w-full z-50 items-center;
+}
 

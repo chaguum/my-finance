@@ -1,13 +1,19 @@
-<p-menubar [model]="items" class="bg-gray-800 text-white">
+<p-menubar [model]="items" class="fixed-navbar text-white">
   <ng-template pTemplate="start">
     <div class="flex items-center cursor-pointer">
       <img src="leaf.png" alt="Logo" class="h-10 mr-3" routerLink="/">
     </div>
   </ng-template>
+  <ng-template pTemplate="item" let-item let-root="root">
+    <a pRipple class="flex align-items-center p-menuitem-link rounded-lg" [routerLink]="item.routerLink">
+      <span [class]="item.icon"></span>
+      <span class="ml-2">{{ item.label }}</span>
+    </a>
+  </ng-template>
   <ng-template pTemplate="end">
     <div class="flex items-center justify-center cursor-pointer">
       <p-avatar [image]="selectedUser.image" shape="circle" size="large" (click)="userMenu.toggle($event)"></p-avatar>
-      <p-tieredMenu class="bg-gray-900" #userMenu [model]="userMenuItems" [popup]="true" class="bg-gray-800 text-white"/>
+      <p-tieredMenu #userMenu [model]="userMenuItems" [popup]="true" class="text-white"></p-tieredMenu>
     </div>
   </ng-template>
 </p-menubar>

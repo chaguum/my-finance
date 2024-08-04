@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { FooterComponent } from "./footer/footer.component";
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,9 @@ import { FooterComponent } from "./footer/footer.component";
 })
 export class AppComponent {
   title = 'myfinance';
+  constructor(private primengConfig: PrimeNGConfig) {}
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
 }

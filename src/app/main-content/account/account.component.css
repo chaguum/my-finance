@@ -1,0 +1,40 @@
+::ng-deep .p-card {
+  @apply bg-gray-800;
+}
+
+::ng-deep .p-card-title {
+  @apply absolute mt-2 flex items-center text-white text-sm	;
+}
+
+::ng-deep .p-datatable-wrapper{
+  @apply rounded;
+}
+
+:host ::ng-deep {
+  #myTable {
+    .p-datatable-thead {
+      background-color: red;
+    }
+  }
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  @apply bg-gray-700 border-none text-white;
+
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  @apply bg-gray-700 text-white;
+}
+
+.darkmode{
+  @apply bg-gray-700;
+}
+
+.main-card{
+  @apply container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4
+}
+
+.main-info {
+  @apply gap-10
+}

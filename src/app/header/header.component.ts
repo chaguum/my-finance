@@ -2,14 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
-import { TieredMenuModule } from 'primeng/tieredmenu';
 import { User } from '../model/user';
 import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SharedModule, RouterModule, TieredMenuModule],
+  imports: [SharedModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -25,14 +24,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Accueil',
-        icon: 'pi pi-home',
-        routerLink: '/'
-      },
-      {
         label: 'Mon compte',
         icon: 'pi pi-user',
-        routerLink: '/account',
+        routerLink: '/',
       },
       {
         label: 'Dépenses',

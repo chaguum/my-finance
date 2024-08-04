@@ -4,14 +4,12 @@ import { EpargneComponent } from './main-content/epargne/epargne.component';
 import { DepenseComponent } from './main-content/depense/depense.component';
 import { NgModule } from '@angular/core';
 import { AccountComponent } from './main-content/account/account.component';
-import { HomeComponent } from './main-content/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'account', component: AccountComponent },
+      { path: '', component: AccountComponent },
       { path: 'depense', component: DepenseComponent },
       { path: 'epargne', component: EpargneComponent },
     ]
